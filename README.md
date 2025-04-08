@@ -49,13 +49,13 @@ A production-grade Python tool to extract business data from Google Maps and cra
 
 2. Create a virtual environment (recommended):
    ```
-   python -m venv venv
+   python3 -m venv venv
    source venv/bin/activate  # On Windows: venv\Scripts\activate
    ```
 
 3. Install dependencies:
    ```
-   pip install -r requirements.txt
+   pip3 install -r requirements.txt
    ```
 
 4. Configure environment variables:
@@ -69,7 +69,7 @@ A production-grade Python tool to extract business data from Google Maps and cra
 ### Basic Usage
 
 ```bash
-python -m src.main "software houses in Pakistan"
+python3 -m src.main "software houses in Pakistan"
 ```
 
 This will search for "software houses in Pakistan" on Google Maps, extract business information, and crawl their websites for email addresses. Results will be saved in all available formats (JSON, CSV, Excel) in the `data` directory.
@@ -77,7 +77,7 @@ This will search for "software houses in Pakistan" on Google Maps, extract busin
 ### Advanced Options
 
 ```bash
-python -m src.main "software houses in Pakistan" --output-format excel --max-businesses 50 --skip-scraped --ignore-ssl-errors
+python3 -m src.main "software houses in Pakistan" --output-format excel --max-businesses 50 --skip-scraped --ignore-ssl-errors
 ```
 
 This command will:
@@ -90,7 +90,7 @@ This command will:
 ### Custom Output Filename
 
 ```bash
-python -m src.main "software houses in Pakistan" --output-prefix "pak_software_houses_2023" --skip-scraped
+python3 -m src.main "software houses in Pakistan" --output-prefix "pak_software_houses_2023" --skip-scraped
 ```
 
 This will save the output files with the prefix "pak_software_houses_2023" instead of the default timestamp-based naming.
@@ -98,7 +98,7 @@ This will save the output files with the prefix "pak_software_houses_2023" inste
 ### Verbose Mode for Debugging
 
 ```bash
-python -m src.main "software houses in Pakistan" --max-businesses 10 --verbose
+python3 -m src.main "software houses in Pakistan" --max-businesses 10 --verbose
 ```
 
 This will show detailed debug information during the scraping process, which is useful for troubleshooting.
